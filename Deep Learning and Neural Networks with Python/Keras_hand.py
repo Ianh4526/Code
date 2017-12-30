@@ -1,10 +1,10 @@
 import keras
 from keras.datasets import mnist
-from keras.model import Sequential
-from keras.layers import Dense, Conv2D, MaxPooling2D, Flatten
+from keras.models import Sequential
+from keras.layers import Dense,Dropout, Conv2D, MaxPooling2D, Flatten
 from keras.optimizers import RMSprop
 
-(mnist_train_images, mnist_train_labels), (mnist_test_images, mnist_test_labels) = mnisl.load_data()
+(mnist_train_images, mnist_train_labels), (mnist_test_images, mnist_test_labels) = mnist.load_data()
 
 from keras import backend as K
 
@@ -30,7 +30,7 @@ import matplotlib.pyplot as plt
 
 def display_sample(num):
     #print the one-hot arrays
-    print(train_labels(num))
+    print(train_labels[num])
     #print the label converter back to number
     label = train_labels[num].argmax(axis=0)
     #reshape the 768 values to 28x28
@@ -41,7 +41,7 @@ def display_sample(num):
 
 display_sample(1234)
 
-model = Senquential()
+model = Sequential()
 model.add(Conv2D(32, kernel_size=(3,3),
                  activation='relu',
                  input_shape=input_shape))
@@ -70,7 +70,7 @@ history = model.fit(train_images, train_labels,
                     batch_size=32,
                     epochs=10,
                     verbose=2,
-                    validation_data=(test_image,test_labels))
-score = model.evaluate(test_image, test_labels, verbose=0)
-print('Test loss:', score=[0])
+                    validation_data=(test_images,test_labels))
+score = model.evaluate(test_images, test_labels, verbose=0)
+print('Test loss:', score[0])
 print('Test accuracy', score[1])
