@@ -1,8 +1,3 @@
-#conditional probability is
-
-#probabiliti when two events depend on each other and the probabili that both
-#will ocur
-
 import numpy as np
 
 np.random.seed(0)
@@ -13,7 +8,7 @@ totalsPurchases = 0
 
 for _ in range(100000):
     ageDecade = np.random.choice([20, 30, 40, 50, 60, 70])
-    purchaseProbability = float(ageDecade) / 100.0
+    purchaseProbability = 0.4
     totals[ageDecade] += 1
     if (np.random.random() < purchaseProbability):
         totalsPurchases +=1
