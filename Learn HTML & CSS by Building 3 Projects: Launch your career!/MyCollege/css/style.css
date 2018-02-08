@@ -1,20 +1,22 @@
 /*-----     MOBILE FIRST    ----*/
-html{
+html {
     background: : #eee;
 }
 
-body{
+
+body {
     margin: 0 auto;
     width: 100%;
+    height: 100%;
     background: white;
 }
 
-img{
+img {
     width: 100%;
     display: block;
 }
 
-p{
+p {
     color: #4a525f;
     margin: 0;
 }
@@ -31,14 +33,14 @@ p{
     text-align: center;
 }
 
-/*----      TOP MENU    ---*/
-ul{
+/*     TOP MENU    */
+ul {
     width: 100%;
     padding: 0;
     list-style: none!important;
 }
 
-li{
+li {
     text-align: center;
     padding: 5px;
     background: #4a525f;
@@ -46,18 +48,18 @@ li{
     border-bottom: 2px solid white;
 }
 
-li, li a{
+li, li a {
     text-decoration: none;
     color: white;
 }
 
-li:hover, li a:hover{
+li:hover, li a:hover {
     background: #393535;
 }
 
-/*----      TOP MENU END    ----*/
+/*     TOP MENU END   */
 
-header{
+header {
     position: relative;
 }
 
@@ -70,11 +72,12 @@ header p{
     font-size: 1.6em;
 }
 
-#apply-btn{
+#apply-btn {
+    position: absolute;
     bottom: 50%;
 }
 
-#apply-btn a{
+#apply-btn a {
     padding: 2px;
     text-decoration: none;
     background: #8393ca;
@@ -82,28 +85,28 @@ header p{
     border-radius: 5px;
 }
 
-#apply-btn a:hover{
+#apply-btn a:hover {
     background: #3e486a;
 }
 
-.row1-1{
+.row1-1 {
     width: 100%;
     float: left;
     margin-bottom: 2%;
 }
 
-.buttons{
+.buttons {
     width: 30%;
     float: left;
     padding-left: 2.5%;
     text-align: center;
 }
 
-.buttons a{
+.buttons a {
     text-decoration: none;
 }
 
-.row1-2{
+.row1-2 {
     width: 100%;
     background: #e0e0eb;
     font-size: 1.6em;
@@ -112,39 +115,39 @@ header p{
     display: inline-block;
 }
 
-.row2{
+.row2 {
     background: #a864a8;
     display: inline-block;
     width: 100%;
     text-align: center;
 }
 
-.row2 img{
+.row2 img {
     width: 40%;
     display: inline-block;
 }
 
-.row2 p{
+.row2 p {
     font-size: 1.4em;
     padding: 3% 0;
     color: white;
 }
 
-.row3-1{
+.row3-1 {
     display: inline-block;
     width: 100%;
     background: #e0e0eb;
     font-size: 1.6em;
     text-align: center;
-    padding: 4% 0;
+    padding: 4% 0 4% 0;
 }
 
-span a{
+span a {
     text-decoration: underline;
     color: #ec008c;
 }
 
-footer p{
+footer p {
     text-align: center;
     padding-bottom: 2%;
     background: white;
@@ -153,16 +156,17 @@ footer p{
 
 /*-----    Devices > 600px    ----*/
 
+@media only screen and (min-width: 600px){
+/*      TOP MENU    */
 
-/*----      TOP MENU    ---*/
-header ul{
+    header ul {
     position: absolute;
     top: 8%;
     text-align: center;
     background: white;
 }
 
-header li, header li a{
+    header li, header li a {
     display: inline-block;
     background: transparent;
     border-bottom: none;
@@ -170,36 +174,36 @@ header li, header li a{
     padding: 5px;
 }
 
-header li{
+    header li{
     border-right: 1px solid #4a525f;
 }
 
-header li:last-child{
+    header li:last-child{
     border-right: none;
 }
 
-header li:hover, header li a:hover{
+    header li:hover, header li a:hover{
     background-color: #d8cccc;
 }
 
 
 /*----      TOP MENU  END  ---*/
 
-header p{
+    header p{
     bottom: 40%;
     font-size: 2em;
 }
 
-#apply-btn{
+    #apply-btn{
     bottom: 30%;
 }
 
-.row1-1{
+    .row1-1{
     width: 50%;
     margin-top: 2%;
 }
 
-.row1-2{
+    .row1-2{
     display: flex;
     width: 50%;
     justify-content: center;
@@ -207,23 +211,114 @@ header p{
     background: white;
 }
 
-.row1-2 p{
+    .row1-2 p{
     max-width: 60%;
 }
 
+    .row2 p{
+    font-size: 2em;
+}
+
+    .sarah, .tom{
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    float: left;
+}
+
+    .row3{
+    display: flex;
+}
+
+    .row3-1{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+    .row3-1 p{
+    max-width: 60%;
+}
+
+    .row3-2{
+    flex: 1;
+}
 
 
+/*----      FOOTER MENU  ---*/
+
+    footer ul {
+    text-align: center;
+    background: #8393ca;
+    margin: 0;
+}
+
+    footer li, footer li a {
+    display: inline-block;
+    background: transparent;
+    border-bottom: none;padding: 5px;
+}
+
+    footer li {
+    border-right: 1px solid #4a525f;
+}
+
+    footer li:last-child {
+    border-right: none;
+}
+
+    footer li:hover, footer li a:hover {
+    background: #3a486a;
+}
+
+    footer p {
+    padding-top: 2%;
+    background: #e0e0eb;
+    font-size: 1.2em;
+}
+}
 
 
-
-
-
-
-
-
-
-
-
+/*-----    Devices > 900px    ----*/
+@media only screen and (min-width: 900px){
+    
+    body {
+        max-width: 1100px;
+    }
+    
+    header ul{
+        max-width: 1100px;
+        background: transparent;
+        text-align: right;
+        top: 1%;
+        right: 2%
+    }
+    
+    header p{
+        font-size: 2.2em;
+        font-weight: bold;
+        max-width: 1100px;
+    }
+    
+    #logo p{
+        text-align: left;
+        padding-left: 1%;
+    }
+    
+    .row1-1{
+        font-size: 1.2em;
+    }
+    
+    .row1-2, .row2 p, .row3-1{
+        font-size:  2.5em;
+    }
+    
+    footer p{
+        font-size: 1.5em;
+    }
+}
 
 
 
