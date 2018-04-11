@@ -1,0 +1,6 @@
+
+Expressions = Values + Operators
+int, float, String
+'Hello World'
+spam = 42
+spam +1
