@@ -1,0 +1,46 @@
+#Exception Handling
+
+#Right now, getting an error, or exception, in your Python program means the entire program will crash.
+#You don’t want this to happen in real-world programs.
+#Instead, you want the program to detect errors, handle them, and then continue to run.
+
+def spam(divideBy):
+    return 42 / divideBy
+
+print(spam(2))
+print(spam(12))
+print(spam(0))
+print(spam(1))
+
+###############################################################
+
+def spam(divideBy):
+    try:
+        return 42 / divideBy
+    except ZeroDivisionError:
+        print('Error: Invalid argument.')
+
+print(spam(2))
+print(spam(12))
+print(spam(0))
+print(spam(1))
+
+###############################################################
+
+def spam(divideBy):
+    return 42 / divideBy
+
+try:
+    print(spam(2))
+    print(spam(12))
+    print(spam(0))
+    print(spam(1))
+except ZeroDivisionError:
+    print('Error: Invalid argument.')
+
+###############################################################
+
+# A divide by zero error happens when python divides a number by ZeroDivisionError
+# Errors can cause the program to crash
+# An error that happens inside a try block will cause code in the except block to execute.
+#That code can handle the error or display a message to the user so that the program can keep going
