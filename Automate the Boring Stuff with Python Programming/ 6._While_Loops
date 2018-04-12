@@ -1,0 +1,58 @@
+
+#while Loop Statements
+#You can make a block of code execute over and over again with a while statement.
+
+spam = 0
+if spam < 5:
+    print('Hello, world.')
+    spam = spam + 1
+#############################################
+
+spam = 0
+while spam < 5:
+    print('Hello, world.')
+    spam = spam + 1
+##############################################
+
+#An Annoying while Loop
+
+name = ''                           # (1)
+while name != 'your name':          # (2)
+    print('Please type your name.')
+    name = input()                  # (3)
+print('Thank you!')                 # (4)
+
+#################################################
+
+#break Statements
+
+#There is a shortcut to getting the program execution to break out of a while loop’s clause early.
+
+while True:                         # (1)
+    print('Please type your name.')
+    name = input()                  # (2)
+    if name == 'your name':         # (3)
+        break                       # (4)
+print('Thank you!')                 # (5)
+#################################################
+
+#continue Statements
+#Like break statements, continue statements are used inside loops.
+
+while True:
+  print('Who are you?')
+  name = input()
+  if name != 'Joe':       #(1)
+    continue              #(2)
+  print('Hello, Joe. What is the password? (It is a fish.)')
+  password = input()      #(3)
+  if password == 'swordfish':
+    break                 #(4)
+print('Access granted.')  #(5)
+
+#################################################
+
+# When the execution reaches the end of a while statements block, it jumps back to the start to re-check the condition
+#pres Ctrl-C to interrupt an infinite loops
+# A break statement causes the execution to immediately leave the loop, without re-checking the condition.
+#a continue statement causes the execution to immediately jump back to the start of the loop and re-check the conditions

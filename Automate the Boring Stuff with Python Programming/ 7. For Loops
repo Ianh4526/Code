@@ -1,0 +1,47 @@
+
+#for Loops and the range() Function
+
+print('My name is')
+for i in range(5):
+    print('Jimmy Five Times (' + str(i) + ')')
+
+#You can use break and continue statements inside for loops as well.
+##################################################
+
+total = 0               #(1)
+for num in range(101):  #(2)
+   total = total + num  #(3)
+print(total)            #(4)
+##################################################
+
+#An Equivalent while Loop
+#You can actually use a while loop to do the same thing as a for loop; for loops are just more concise.
+
+print('My name is')
+i = 0
+while i < 5:
+    print('Jimmy Five Times (' + str(i) + ')')
+    i = i + 1
+##################################################
+
+#The Starting, Stopping, and Stepping Arguments to range()
+#Some functions can be called with multiple arguments separated by a comma, and range() is one of them.
+
+for i in range(12, 16):
+    print(i)
+##################################################
+
+#The range() function can also be called with three arguments.
+#The first two arguments will be the start and stop values, and the third will be the step argument.
+#The step is the amount that the variable is increased by after each iteration.
+
+for i in range(0, 10, 2):
+    print(i)
+##################################################
+for i in range(5, -1, -1):
+    print(i)
+##################################################
+
+# For loops will loop a specific number of times.
+# the range() function called with one, two, or three arguments
+# break and continue can be used in for Loops
