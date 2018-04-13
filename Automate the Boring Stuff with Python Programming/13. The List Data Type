@@ -1,0 +1,166 @@
+# Lists
+
+#Lists and tuples can contain multiple values, which makes it easier to write programs that handle large amounts of data.
+
+spam = ['cat', 'bat', 'rat', 'elephant']
+
+#######################################################################################################
+#The List Data Type
+
+#A list is a value that contains multiple values in an ordered sequence.
+#The term list value refers to the list itself (which is a value that can be stored in a variable or passed to a function like any other value),
+#not the values inside the list value.
+
+############################################################################################
+#Getting Individual Values in a List with Indexes
+
+#Say you have the list ['cat', 'bat', 'rat', 'elephant'] stored in a variable named spam.
+
+>>> spam = ['cat', 'bat', 'rat', 'elephant']
+   >>> spam[0]
+   'cat'
+   >>> spam[1]
+   'bat'
+   >>> spam[2]
+   'rat'
+   >>> spam[3]
+   'elephant'
+   >>> ['cat', 'bat', 'rat', 'elephant'][3]
+   'elephant'
+❶ >>> 'Hello ' + spam[0]
+❷ 'Hello cat'
+   >>> 'The ' + spam[1] + ' ate the ' + spam[0] + '.'
+   'The bat ate the cat.'
+###########################################################################################################################
+#  Negative Indexes
+
+#The integer value -1 refers to the last index in a list, the value -2 refers to the second-to-last index in a list, and so on.
+
+>>> spam = ['cat', 'bat', 'rat', 'elephant']
+>>> spam[-1]
+'elephant'
+>>> spam[-3]
+'bat'
+>>> 'The ' + spam[-1] + ' is afraid of the ' + spam[-3] + '.'
+'The elephant is afraid of the bat.'
+##########################################################################################################################
+Getting Sublists with Slices
+
+Just as an index can get a single value from a list, a slice can get several values from a list, in the form of a new list.
+
+    spam[2] is a list with an index (one integer).
+
+    spam[1:4] is a list with a slice (two integers).
+
+      >>> spam = ['cat', 'bat', 'rat', 'elephant']
+      >>> spam[0:4]
+      ['cat', 'bat', 'rat', 'elephant']
+      >>> spam[1:3]
+      ['bat', 'rat']
+      >>> spam[0:-1]
+      ['cat', 'bat', 'rat']
+
+
+      >>> spam = ['cat', 'bat', 'rat', 'elephant']
+      >>> spam[:2]
+      ['cat', 'bat']
+      >>> spam[1:]
+      ['bat', 'rat', 'elephant']
+      >>> spam[:]
+      ['cat', 'bat', 'rat', 'elephant']
+
+#########################################################################################################################
+
+Getting a List’s Length with len()
+
+The len() function will return the number of values that are in a list value passed to it,
+ just like it can count the number of characters in a string value.
+
+ >>> spam = ['cat', 'dog', 'moose']
+ >>> len(spam)
+ 3
+
+###############################################################################################
+
+Changing Values in a List with Indexes
+
+However, you can also use an index of a list to change the value at that index.
+
+
+>>> spam = ['cat', 'bat', 'rat', 'elephant']
+>>> spam[1] = 'aardvark'
+>>> spam
+['cat', 'aardvark', 'rat', 'elephant']
+>>> spam[2] = spam[1]
+>>> spam
+['cat', 'aardvark', 'aardvark', 'elephant']
+>>> spam[-1] = 12345
+>>> spam
+['cat', 'aardvark', 'aardvark', 12345]
+
+##################################################################################################
+
+List Concatenation and List Replication
+
+The + operator can combine two lists to create a new list value in the same way it combines two strings into a new string value.
+The * operator can also be used with a list and an integer value to replicate the list.
+
+>>> [1, 2, 3] + ['A', 'B', 'C']
+[1, 2, 3, 'A', 'B', 'C']
+>>> ['X', 'Y', 'Z'] * 3
+['X', 'Y', 'Z', 'X', 'Y', 'Z', 'X', 'Y', 'Z']
+>>> spam = [1, 2, 3]
+>>> spam = spam + ['A', 'B', 'C']
+>>> spam
+[1, 2, 3, 'A', 'B', 'C']
+
+######################################################################################################
+
+Removing Values from Lists with del Statements
+
+The del statement will delete values at an index in a list.
+>>> spam = ['cat', 'bat', 'rat', 'elephant']
+>>> del spam[2]
+>>> spam
+['cat', 'bat', 'elephant']
+>>> del spam[2]
+>>> spam
+['cat', 'bat']
+
+
+#######################################################################################################
+
+Working with Lists
+
+When you first begin writing programs, it’s tempting to create many individual variables to store a group of similar values.
+
+catNames = []
+while True:
+    print('Enter the name of cat ' + str(len(catNames) + 1) +
+      ' (Or enter nothing to stop.):')
+    name = input()
+    if name == '':
+        break
+    catNames = catNames + [name] # list concatenation
+print('The cat names are:')
+for name in catNames:
+    print('  ' + name)
+###########################################################################################################
+
+A list is a value that contains multiple Values
+
+The value in a list are also called items
+
+You can access items in a list with its integer Indexes
+
+the indexes start at 0, not 1
+
+you can also use negative index -1 last item, -2 second to last
+
+ypu can get multiple items from the list using a Slices
+
+the slice has two indexes the new list start at the first index and goes up to but doesnt include the second indexes
+
+the len() function, the concatenation and replication work the same way as with strings
+
+you can convert a value into a list by passing it to the list() function
