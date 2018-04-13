@@ -1,0 +1,185 @@
+
+List-like Types: Strings and Tuples
+
+Lists aren’t the only data types that represent ordered sequences of values.
+
+>>> name = 'Zophie'
+>>> name[0]
+'Z'
+>>> name[-2]
+'i'
+>>> name[0:4]
+'Zoph'
+>>> 'Zo' in name
+True
+>>> 'z' in name
+False
+>>> 'p' not in name
+False
+>>> for i in name:
+        print('* * * ' + i + ' * * *')
+
+* * * Z * * *
+* * * o * * *
+* * * p * * *
+* * * h * * *
+* * * i * * *
+* * * e * * *
+
+#############################################################################################################################33
+
+Mutable and Immutable Data Types
+
+But lists and strings are different in an important way.
+A list value is a mutable data type: It can have values added, removed, or changed. However, a string is immutable: It cannot be changed.
+
+>>> name = 'Zophie a cat'
+>>> name[7] = 'the'
+Traceback (most recent call last):
+  File "<pyshell#50>", line 1, in <module>
+    name[7] = 'the'
+TypeError: 'str' object does not support item assignment
+
+
+>>> name = 'Zophie a cat'
+>>> newName = name[0:7] + 'the' + name[8:12]
+>>> name
+'Zophie a cat'
+>>> newName
+'Zophie the cat'
+
+
+>>> eggs = [1, 2, 3]
+>>> eggs = [4, 5, 6]
+>>> eggs
+[4, 5, 6]
+
+
+
+>>> eggs = [1, 2, 3]
+>>> del eggs[2]
+>>> del eggs[1]
+>>> del eggs[0]
+>>> eggs.append(4)
+>>> eggs.append(5)
+>>> eggs.append(6)
+>>> eggs
+[4, 5, 6]
+
+##################################################################################
+The Tuple Data Type
+
+The tuple data type is almost identical to the list data type, except in two ways.
+
+>>> eggs = ('hello', 42, 0.5)
+>>> eggs[0]
+'hello'
+>>> eggs[1:3]
+(42, 0.5)
+>>> len(eggs)
+3
+
+
+>>> eggs = ('hello', 42, 0.5)
+>>> eggs[1] = 99
+Traceback (most recent call last):
+  File "<pyshell#5>", line 1, in <module>
+    eggs[1] = 99
+TypeError: 'tuple' object does not support item assignment
+
+
+>>> type(('hello',))
+<class 'tuple'>
+>>> type(('hello'))
+<class 'str'>
+###################################################################################################
+
+Converting Types with the list() and tuple() Functions
+
+Just like how str(42) will return '42', the string representation of the integer 42,
+the functions list() and tuple() will return list and tuple versions of the values passed to them.
+
+>>> tuple(['cat', 'dog', 5])
+('cat', 'dog', 5)
+>>> list(('cat', 'dog', 5))
+['cat', 'dog', 5]
+>>> list('hello')
+['h', 'e', 'l', 'l', 'o']
+
+####################################################################################################
+
+References
+
+As you’ve seen, variables store strings and integer values.
+
+>>> spam = 42
+>>> cheese = spam
+>>> spam = 100
+>>> spam
+100
+>>> cheese
+42
+
+
+❶ >>> spam = [0, 1, 2, 3, 4, 5]
+❷ >>> cheese = spam
+❸ >>> cheese[1] = 'Hello!'
+   >>> spam
+   [0, 'Hello!', 2, 3, 4, 5]
+   >>> cheese
+   [0, 'Hello!', 2, 3, 4, 5]
+#############################################################################################################
+
+Passing References
+
+References are particularly important for understanding how arguments get passed to functions.
+
+def eggs(someParameter):
+    someParameter.append('Hello')
+
+spam = [1, 2, 3]
+eggs(spam)
+print(spam)
+
+
+##################################################################################################
+
+The copy Module’s copy() and deepcopy() Functions
+
+Although passing around references is often the handiest way to deal with lists and dictionaries,
+if the function modifies the list or dictionary that is passed, you may not want these changes in the original list or dictionary value.
+
+
+>>> import copy
+>>> spam = ['A', 'B', 'C', 'D']
+>>> cheese = copy.copy(spam)
+>>> cheese[1] = 42
+>>> spam
+['A', 'B', 'C', 'D']
+>>> cheese
+['A', 42, 'C', 'D']
+
+
+
+
+
+
+If the list you need to copy contains lists, then use the copy.deepcopy() function instead of copy.copy().
+The deepcopy() function will copy these inner lists as well.
+
+The first of these, copy.copy(), can be used to make a duplicate copy of a mutable value like a list or dictionary, not just a copy of a reference.
+
+
+#########################################################################################################################
+
+String can do a lot of the same things as list can do, but strings are Immutable
+
+immutable values like string and tuplets cannot be modified in place
+
+mutable values like list can be modified in place
+
+variables dont contain list, they contain references to lists
+
+when passing a list argument to a function will affect the list outside the functions
+
+The \ line continuation caracter can be used un stretch Python instructions across multiple lines.

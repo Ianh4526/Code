@@ -4,3 +4,13 @@ int, float, String
 'Hello World'
 spam = 42
 spam +1
+
+Order of operation
+1     Parentheses
+2     Multiplication / division
+3     Addition / Subtraction
+
+Data Type
+
+Integers
+Floating point numbers
