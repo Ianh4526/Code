@@ -1,0 +1,29 @@
+Lesson 1 Introduction
+
+
+UiPath RPA Platform
+
+Compatible with Excel, PDF and all Database types.
+Email: STMP, IMAP or POP3 Servers
+Data processing actions
+Terminals: Green Screens, Mainframes, and others
+Request HTTP, SOAP
+Desktop applications: all, .net, java, c++, FoxPro...
+
+Run In the background
+
+UiPath Studio
+A designer tool that creates diagrams of business processes
+Based on Microsoft Workflow foundation
+and visually based on Microsoft Visio
+
+
+UiPath Robot
+Run the processes design in UiPath Studio
+Works on: 1. Fully Autonomous mode. 2. Assistant mode
+
+UiPath Orchestrator
+Web Base Management platform for remote control, monitoring, release management and centralized scheduling of robots and processes.
+
+Recording process
+Basic, Desktop, Web, Citrix

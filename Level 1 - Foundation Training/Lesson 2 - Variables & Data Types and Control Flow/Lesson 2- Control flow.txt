@@ -1,0 +1,26 @@
+Lesson 2- Control flow
+
+is the process of defining the rules and automatic decisions your workflow will take, through the use of if/else decisions, loops and so on.
+
+IF ELSE decision
+its used in the flowchart and in the sequence Mode
+
+Input dialog box gives you  a place where to type 
+
+LOOPS
+Used to automate repetitive tasks
+
+flowchart only need to connect from a point to an earlier one
+
+sequence using For Each, do while, While
+
+Do while and do 
+work by repeating the set of actions in the body while the conditions are true it changes the order in which the 2 elements are executed.
+while first test and then execute
+do while executing and then test
+
+
+For each
+iterating through a list of items one at a time and executing the body
+
+not equal <>
