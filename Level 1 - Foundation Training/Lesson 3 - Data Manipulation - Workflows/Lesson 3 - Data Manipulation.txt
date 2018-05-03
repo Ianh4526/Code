@@ -1,0 +1,152 @@
+Lesson 3 - Data Manipulation
+
+
+Data
+Text, numbers, datetimes
+arrays, list
+Tables
+
+Are stored in variables and use VB expressions to configure activities
+ctrl + k to create variables
+
+
+Categories of Variables
+Scalar Variables: holding a single value of fixed type
+Characters, booleans Numbers Date times
+
+Collections 
+Arrays, list , queue
+String
+Dictionaries 2 synchronized collectios of associated names and values that allow a value to be referenced b y its name rather than its index. Pull data from Orchestrator queues
+
+
+Tables
+2 dimensional structures thath hold data index by rows and columns. similar to an array of dictionaries, wherer values are accessible by row index and column names
+
+
+Generic Value
+Special type, entire unique on UiPath that simplifies the use of basic activities. it can represent basic types of data
+String, Boolean, DateTimes
+
+pros: 
+Flexible use of variables
+No considerations of the type
+
+Cons
+No handling methods 
+imprecise expressions evaluations
+
+Collections
+Arrays fixed sized
+handy in most placed
+
+List
+Flexible size
+Advanced use cases
+
+defining array
+pick data type and specify elements type
+optional give a  default value like a comma-separated sequence items {asd,asd,asd
+
+defining a list
+browse the generic.list type and then pick the content type
+to initialize set the default value to a new list, stating again the element type in the declaration
+Optional 
+providing some content to the new list using an initialization array
+new List of String from{asda,asdasd
+
+uses a for each activity and selecting the correct type argument
+
+to add to a list 
+using invoke method
+target list object
+methodName Add
+and the new element specified in the parameters property element type should match
+
+
+Dictionaries
+used for working with the orchestrator queues and also hold multiple values in a single variable
+reducing argument when passing data between workflows
+
+to define browse for the dictionarie and especifiy the  type key type and value type
+to initialize wiht values use the dictionary constructor with an array of  key/value pairs
+
+addding with a simple assign 
+the key name specified to the left and the new value to the right
+
+
+Text, String 
+
+Input: email, files,screen screping
+Output: applications, emails, files,logs
+Internal(no input or output):  Selectors, names, files paths
+
+set a string in the variable pane
+
+string is a sequence of characters encosed in double quotes if it have quotes write them twice(scape sequence) 
+ready to be used in expressions
+using methosds just use dot at the end of the variable name
+
+Handling Text
+
+Extracting data
+Split method
+
+Assembling Text
+Concatenation
+string.format Method
+
+Concatenation using the + but if are various types need to individual converted to string al types have a default .tostring
+
+much data uses a strign format automaticaly converts data to text representation and it also suports custom formatting
+
+Method
+Contains
+Endswith/startwith
+format
+replace
+split
+substring
+Tolower/toupper
+Trim
+
+
+
+Data Tables
+from Excels, CSV files
+Web data screpping
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
