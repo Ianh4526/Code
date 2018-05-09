@@ -1,0 +1,75 @@
+Lesson 4 - Recording
+
+User Interface Recording
+
+The recorder works like other macro recording apps like AutoHotKey and Automator but on steroids
+
+Allowing to record and replay actions, and by allowing you to modify and parametrize the recorded sequence.
+it's good because it gives you a workflow that you can use as a framework to build upon.
+
+
+Types of recording
+Basic
+Desktop:     the actions performed are nested inside an AttachWindow Container app, menus, pop-ups, dialogs windows so other windows of the same application don't interfere with your workflow
+Web
+Citrix
+
+Basic and Desktop are similar and are used to record most desktop applications that you may work with.
+
+web recording is similar to the first two but made for browsers and web apps
+
+Citrix is for virtual machines, VNC and CItrix enviromens
+
+Recordable 
+LEFT clicks on
+Buttons, checkboxes, dropdowns, etc
+
+Text Typing
+
+Non-Recordable//// Manual Recording
+keyboard shortcuts
+modifiers keys
+Right click
+Mouse Hover
+Etc
+Getting Text
+Find elements and images
+Copy to clipboard
+
+UiPath identifies the right window by using
+Name of the app
+Title of the window
+Current open file
+and other details
+
+
+BASIC RECORDING
+pros
+Actions are self-contained
+simpler workflow
+cons
+can cause interference
+
+DESKTOP RECORDING
+pros
+Actions are contained inside an AttachWindow component
+No interference issues
+cons
+More complex workflow
+
+F2 to pause the recording
+
+Manual Recording 
+is the process of telling Uipath to do all those actions that cannot be recorded 
+
+Selectors 
+Is like a recipe for finding the correct element on the screen, or like a file path on windows, except a bit more complex.
+
+WEB RECORDING
+like desktop recording but for web...
+
+to make uipath think a generic is a number starts with a number
+and if its a string start with a string
+
+make a copy of the current workflow is a good practice
+

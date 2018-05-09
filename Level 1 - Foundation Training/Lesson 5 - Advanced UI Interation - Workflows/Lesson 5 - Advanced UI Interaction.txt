@@ -1,0 +1,66 @@
+Lesson 5 - Advanced UI Interaction
+
+
+UI interactions in UiPath are
+Input
+Where you or the robot takes direct actions on the app or web you are automating (Make the application do Something)
+clicks, text typing, Keyboard Shortcuts, Right clicks, mouse hover, etc
+
+Output
+Actions that get information Out of the app and into UiPath for processing the are not recordable because outputs are read on the display
+Getting text, Find elements and images, clipboard operations, etc
+
+
+Input Methods for Click and type actions
+Default
+Uses Mouse and Keyboard drivers to simulate a human Operating them and works every time
+Compatibility 100%;     Doesn't work on background;     Speed 50%;     Support Hotkeys;     No Auto Empty Field
+
+Window Messages
+Compatibility 80%;     work on background;     Speed 50%;     Support Hotkeys;     No Auto Empty Field
+
+Simulate type/Click
+Compatibility 70%;     work on background;     Speed 100%;    No Support Hotkeys;    Auto Empty Field
+
+Output Method 
+
+When to use Screen Scraping
+A bigger block of text
+information behind complex UI
+You need exact word position on the screen.
+
+Screen Scraping
+Fulltext
+Default method and best for most situations 
+SPEED 10;     Accuracy 100%;     Works In background;     Gets Text Position NO;     Get text Hidden;
+works with CITRIX NO.
+
+Native
+Is able to extract word information like the coordinate of each word or character
+SPEED 8;     Accuracy 100%;     Works In background NO;     Gets Text Position;     Get text Hidden NO;
+works with CITRIX NO.
+
+OCR
+Optical character recognition (OCR) software works with your scanner to convert printed characters into digital text
+Last resort in a situation where none of the other work
+SPEED 3;     Acurracy 98%;     Works In background NO;     Gets Text Position;     Get text HiddenNO;
+works with CITRIX.
+
+
+Output method          Manual Action
+Basic Recording          getText
+Full Text                         getFullText
+Native                              getVisibleText
+OCR                                   GetOCRText
+
+Web Scraping
+Desing to stract Structure Data to a data Table or Spreadsheet.                              all other extract freeform data
+
+Structure Data
+is a type of information that follows a certain pattern.
+
+
+
+
+
+
